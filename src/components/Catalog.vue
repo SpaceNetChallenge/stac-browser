@@ -166,7 +166,11 @@ export default {
         dateAcquired: {
           label: "Date Acquired",
           sortable: true
-        }
+        },
+        gsd: {
+            label: "Ground Sample Distance",
+            sortable: true
+        },
       },
       currentPage: 1,
       perPage: 25
@@ -257,7 +261,8 @@ export default {
                 item.slug || this.slugify(item.href)
               ].join("/"),
             title: catalog.id || item.title || item.href,
-            dateAcquired: catalog.properties.datetime
+            dateAcquired: catalog.properties.datetime,
+            gsd: catalog.properties["eo:gsd"]
           };
         }
 
