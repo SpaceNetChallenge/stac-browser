@@ -373,7 +373,7 @@ export default {
       // TODO global config
       return `https://14ffxwyw5l.execute-api.us-east-1.amazonaws.com/production/tiles/{z}/{x}/{y}.jpg?url=${
         this.cog
-      }"&rgb=5,3,2&linearStretch=true`;
+      }&rgb=5,3,2&linearStretch=true`;
       // return `http://localhost:8000/tiles/{z}/{x}/{y}@2x?url=${encodeURIComponent(
       //   this.cog
       // )}`;
