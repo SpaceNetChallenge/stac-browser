@@ -168,9 +168,13 @@ export default {
           sortable: true
         },
         gsd: {
-            label: "Ground Sample Distance",
-            sortable: true
+          label: "Ground Sample Distance",
+          sortable: true
         },
+        platform: {
+          label: "Sensor Platform",
+          sortable: true
+        }
       },
       currentPage: 1,
       perPage: 25
@@ -262,7 +266,8 @@ export default {
               ].join("/"),
             title: catalog.id || item.title || item.href,
             dateAcquired: catalog.properties.datetime,
-            gsd: catalog.properties["eo:gsd"]
+            gsd: parseFloat(catalog.properties["eo:gsd"]).toFixed(2),
+            platform: catalog.properties["eo:platform"]
           };
         }
 
