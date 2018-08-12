@@ -371,7 +371,7 @@ export default {
       }
 
       // TODO global config
-      return `https://tiles.rdnt.io/tiles/{z}/{x}/{y}@2x?url=${encodeURIComponent(
+      return `https://14ffxwyw5l.execute-api.us-east-1.amazonaws.com/production/tiles/{z}/{x}/{y}@2x?url=${encodeURIComponent(
         this.cog
       )}`;
       // return `http://localhost:8000/tiles/{z}/{x}/{y}@2x?url=${encodeURIComponent(
