@@ -8,6 +8,11 @@ implemented as a single page application (SPA) for ease of development and to
 limit the overall number of catalog reads necessary when browsing (as catalogs
 may be nested and do not necessarily contain references to their parents).
 
+This version is specifically modified for experimentation with the SpaceNet Repository
+
+The SpaceNet Repository has examples of many datasets including, WV2, WV3, VRICON, and LIDAR
+
+It also contains examples of Machine Learning outputs for both Building Footprint and Road Network Extraction
 ## Running
 
 By default, stac-browser will browse the ISERV catalog. To browse your own, set
@@ -15,13 +20,13 @@ By default, stac-browser will browse the ISERV catalog. To browse your own, set
 
 ```bash
 yarn
-CATALOG_URL=http://path/to/catalog.json yarn start -- --open
+CATALOG_URL=CATALOG_URL=https://s3.amazonaws.com/spacenet-stac/spacenet-repository.json  yarn start -- --open
 ```
 
 ## Building
 
 ```bash
-CATALOG_URL=http://path/to/catalog.json yarn run build
+CATALOG_URL=CATALOG_URL=https://s3.amazonaws.com/spacenet-stac/spacenet-repository.json  yarn run build
 ```
 
 ## Contributing
