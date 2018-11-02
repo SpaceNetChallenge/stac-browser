@@ -371,12 +371,12 @@ export default {
       return this.catalog != null ? this.catalog.providers : null;
     },
     spatialExtent() {
-      return this.catalog != null ? this.catalog.extent.spatial : null;
+      return this.catalog != null && this.catalog.extent != null ? this.catalog.extent.spatial : null;
     },
     temporalExtent() {
-      if (this.catalog == null) {
-        return null;
-      }
+      if (this.catalog == null || this.catalog.extent == null) {
+         return null;
+       }
 
       const {
         extent: { temporal }
