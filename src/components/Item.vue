@@ -377,7 +377,7 @@ export default {
       if (this.assets != null) {
         const cog = this.assets.find(
           // TODO "visual" is a hack
-          x => x.type === "image/x.cloud-optimized-geotiff" // && x.key === "raster"
+          x => x.type === "image/vnd.stac.geotiff; cloud-optimized=true" // && x.key === "raster"
         );
 
         if (cog != null) {
@@ -394,9 +394,9 @@ export default {
       }
 
       // TODO global config
-      return `https://tiles.rdnt.io/tiles/{z}/{x}/{y}@2x?url=${encodeURIComponent(
+      return `https://14ffxwyw5l.execute-api.us-east-1.amazonaws.com/production/tiles/{z}/{x}/{y}.jpg?url=${
         this.cog
-      )}`;
+      }&linearStretch=true`;
       // return `http://localhost:8000/tiles/{z}/{x}/{y}@2x?url=${encodeURIComponent(
       //   this.cog
       // )}`;
