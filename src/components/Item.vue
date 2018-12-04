@@ -377,7 +377,7 @@ export default {
       if (this.assets != null) {
         const cog = this.assets.find(
           // TODO "visual" is a hack
-          x => x.type === "image/x.cloud-optimized-geotiff" // && x.key === "visual"
+          x => x.type === "image/x.cloud-optimized-geotiff" // && x.key === "raster"
         );
 
         if (cog != null) {
